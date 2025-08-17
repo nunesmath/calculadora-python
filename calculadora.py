@@ -22,10 +22,17 @@ while True:
     #Checagem que verifica SE a opção informada pelo usuário anteriormente é diferente de 'sair', sendo verdadeiro (True) o restante do código é executado
     #Obs: '.lower()' transforma a entrada do usuario no formato minusculo, a fim de garantir que a entrada do usuário seja convertida para o mesmo formato das funções
     if operacao.lower() != 'sair':
-        #Variável que armazena a resposta do usuário à pergunta efetuada no terminal e converte para número decimal
-        primeiro_numero = float(input('\nInforme o primeiro número: '))
-        #Variável que armazena a resposta do usuário à pergunta efetuada no terminal e converte para número decimal
-        segundo_numero = float(input('\nInforme o segundo número: '))
+        try:
+            #Variável que armazena a resposta do usuário à pergunta efetuada no terminal e converte para número decimal
+            primeiro_numero = float(input('\nInforme o primeiro número: '))
+            #Variável que armazena a resposta do usuário à pergunta efetuada no terminal e converte para número decimal
+            segundo_numero = float(input('\nInforme o segundo número: '))
+        # Captura o erro caso o usuário digite algo que não possa ser convertido para número
+        except ValueError:
+            # Exibe uma mensagem de erro informando que a entrada é inválida
+            print('Por favor, insira um número válido.')
+            # Continua o loop, retornando ao início para que o usuário tente novamente
+            continue
         #Checagem que verifica SE a operacao informada foi soma, sendo verdadeiro a função SOMA é chamada e o resultado é exibido no terminal
         if operacao.lower() == 'soma':
             print(f'\nA soma entre {primeiro_numero} e {segundo_numero} é {soma(primeiro_numero, segundo_numero)}')
