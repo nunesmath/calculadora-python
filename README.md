@@ -32,7 +32,7 @@ git clone https://github.com/nunesmath/calculadora-python.git
 2. Entre na pasta do projeto
 
 ```bash
-cd estudos_python
+cd calculadora-python
 ```
 
 3. Execute o programa
@@ -40,5 +40,6 @@ cd estudos_python
 ```bash
 python calculadora.py
 ```
+
 
 4. Siga as instruções no terminal para escolher a operação e inserir os números. Digite sair para encerrar a calculadora.
